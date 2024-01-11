@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Сайт с дизайном</title>
+        <link rel="stylesheet" href="./normalize.css">
+        <link rel="stylesheet" href="./Home.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header class="header">
+            <div class="wrapper">
+                <div class="header__wrapper">
+                    <a href="#" class="header__logo">
+                        <img id="headerLogo" src="triangle-logo 1.png" alt="">
+                    </a>
+                    <div class="header-menu">
+                        <a href="#main" class="header-menu__link">Главная</a>
+                        <a href="#about" class="header-menu__link">О секции</a>
+                        <a href="#youtube" class="header-menu__link">Все что надо знать</a>
+                    <div class = "header-theme">
+                        <button id = "light" class = "header-theme__button">
+                            Светлая тема
+                        </button>
+                        <button id = "dark" class = "header-theme__button">
+                            Темная тема
+                        </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section class="main" id="main">
+                <div class="wrapper">
+                    <div class="main__wrapper">
+                        <div class="main-left">
+                            <h1 class="main-left__title">
+                                Это мой сайт
+                            </h1>
+                            <p class="main-left__text">
+                                И его тема . . .
+                            </p>
+                        </div>
+                        <div class="main-right">
+                            <img src="main-img.png" alt="main image" class="main-right__img">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="youtube" id="youtube">
+                <div class="wrapper">
+                    <div class="youtube__wrapper">
+                        <h2 class="youtube__title">
+                            Видео с котами 
+                        </h2>
+                        <iframe width="1280" height="720" src="https://www.youtube.com/embed/9tRHtctkpM0" title="Смешное Видео с Кошками!  Веселые Кошки 2015 / Funny Cats Video Compilation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </section>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <p class="swiper-text">Собака</p>    
+                        <img src="собака.jpg" alt="dog">
+                    </div>
+                    <div class="swiper-slide">
+                        <p class = "swiper-text">Кот</p>
+                        <img src = "кот.jpg" alt = "cat">
+                    </div>
+                    <div class="swiper-slide">
+                        <p>Апельсины</p>
+                        <img src = "Апельсины.jpg">
+                    </div>
+                </div>
+            </div>
+        </main>
+        <section class='section-creator'>
+            <div class="wrapper">
+                <form class="section-creator__wrapper">
+                    <div>
+                        <input id="titleCreator" class="section-creator__input" type="text" placeholder="Введите заголовок">
+                        <button type="button" id="addTitle" class="section-creator__button">Добавить заголовок</button>
+                    </div>
+                    <div>
+                        <input id="imgCreator" class="section-creator__input" type="text" placeholder="Вставьте ссылку на картинку">
+                        <button type="button" id="addImage" class="section-creator__button">Добавить картинку</button>
+                    </div>
+                    <div>
+                        <textarea placeholder="Напишите текст" id="textCreator" class="section-creator__input">
+                        </textarea>
+                        <button type="button" id="addText" class="section-creator__button">Добавить текст</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section class = "project">
+            <div class = "wrapper">
+                <div class = "project__wrapper">
+                    <div class = "project__left">
+                        <h2 id = "projectTitle" class = "project__title"></h2>
+                        <p id = "projectText" class = "project__text"></p>
+                    </div>
+                    <div id = "projectImg" class = "project__img"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+        <script>
+            const swiper = new Swiper(".mySwiper", {
+                effect: 'flip',
+                autoplay: true,
+            });
+
+            const str = 'Hello!';
+            function hello() {
+                alert(str);
+            }
+
+            function message() {
+                alert( 'Функция из тега script внутри HTML' );
+            }
+        </script>
+
+
+        <script src="./script.js"></script>
+    </body> 
+</html>
